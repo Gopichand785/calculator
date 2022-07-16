@@ -1,0 +1,108 @@
+<html>
+    <head>
+<title>calculator</title>
+<!--using css -->
+        <style>
+            input{
+                background-color: rgb(96, 98, 98);
+                color: #1616a5;
+                width: 80px;
+                height: 80px;
+                font-size: 25px;
+                text-align: center;
+                
+            }
+            input:hover{
+                background-color: brown;
+            }
+            input:active{
+                background-color: darkgreen;
+            }
+            button{
+                background-color:aqua;
+                color:#ee82ee ;
+                width: 50px;
+                height: 30px;
+                font-size: 40px;
+            }
+            .container{
+                position:absolute;
+                left:40%;
+                top:20%;
+                border-radius:8px 8px 0 0;
+                transform: translate(-50% -50%);
+                background: rgb(24, 116, 97);
+                box-shadow: rgba(33, 97, 193, 0.4);
+                display: flex;
+
+            }
+            h3 {
+                text-align: center;
+                color:#1616a5;
+                position: relative;
+                top: 50px;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <h3>Calculator</h3>
+        <div class="container">
+            <!--using table tags-->
+        <table>
+            <tr>
+              <td><input type="text"  id="result" /></td>
+              <!-- taking Id(result) hole scripting function-->
+               <td><input type="text"  id="result"  /></td>
+                <td><input type="button" value="del" onclick="del()"/></td>
+                <td><input type="button" value="*" onclick="dis()"/></td>
+               
+            </tr>
+            <tr>
+                <td><input type="button" value="1" onclick="dis()"/></td>
+                <td><input type="button" value="2" onclick="dis()"/></td>
+                <td><input type="button" value="3" onclick="dis()"/></td>
+                <td><input type="button" value="/" onclick="dis()"/></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="4" onclick="dis()"/></td>
+                <td><input type="button" value="5" onclick="dis()"/></td>
+                <td><input type="button" value="6" onclick="dis()"/></td>
+                <td><input type="button" value="-" onclick="dis()"/></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="7" onclick="dis()"/></td>
+                <td><input type="button" value="8" onclick="dis()"/></td>
+                <td><input type="button" value="9" onclick="dis()"/></td>
+                <td><input type="button" value="+" onclick="dis()"/></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="." onclick="dis()"/></td>
+                <td><input type="button" value="0" onclick="dis()"/></td>
+                <!--equal taking function solve in this case-->
+                <td><input type="button" value="=" onclick="solve()"/></td>
+                <td><input type="button" value="c" onclick="clr()"/></td>
+            </tr>
+        </table>
+        </div>
+        <!--script dom -->
+        <script>
+            function dis(){
+                document.getElementById("result").value
+            }
+            function solve(){
+                let x=document.getElementById("result").value
+                let y=eval(x)
+                document.getElementById("result").value=y
+            }
+            function clr() {
+                document.getElementById("result").value=""
+            }
+            function del() {
+              let x= document.getElementById("result")
+                    
+            }
+        </script>
+    </body>
+</html>
