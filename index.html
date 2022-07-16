@@ -3,13 +3,14 @@
 <title>calculator</title>
 <!--using css -->
         <style>
-            input{
+            input[type=button]{
                 background-color: rgb(96, 98, 98);
                 color: #1616a5;
-                width: 80px;
-                height: 80px;
-                font-size: 25px;
+                width: 70px;
+                height: 70px;
+                font-size: 15px;
                 text-align: center;
+                box-sizing:inherit;
                 
             }
             input:hover{
@@ -21,15 +22,16 @@
             button{
                 background-color:aqua;
                 color:#ee82ee ;
-                width: 50px;
-                height: 30px;
-                font-size: 30px;
+                width: 90px;
+                height: 90px;
+                font-size: 10px;
+                box-sizing: border-box;
             }
             .container{
                 position:absolute;
                 left:40%;
                 top:20%;
-                border-radius:8px 8px 0 0;
+                border-radius:8px 0;
                 transform: translate(-50% -50%);
                 background: rgb(24, 116, 97);
                 box-shadow: rgba(33, 97, 193, 0.4);
@@ -50,11 +52,10 @@
         <h3>Calculator</h3>
         <div class="container">
             <!--using table tags-->
-        <table>
+        <table border="3">
             <tr>
-              <td><input type="text"  id="result" /></td>
+              <td colspan="2"><input type="text"  id="result" /></td>
               <!-- taking Id(result) hole scripting function-->
-               <td><input type="text"  id="result"  /></td>
                 <td><input type="button" value="del" onclick="del()"/></td>
                 <td><input type="button" value="*" onclick="gopi()"/></td>
                
