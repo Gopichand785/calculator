@@ -57,30 +57,30 @@
               <td colspan="2"><input type="text"  id="result" /></td>
               <!-- taking Id(result) hole scripting function-->
                 <td><input type="button" value="del" onclick="del()"/></td>
-                <td><input type="button" value="*" onclick="gopi()"/></td>
+                <td><input type="button" value="*" onclick="gopi('*')"/></td>
                
             </tr>
             <tr>
-                <td><input type="button" value="1" onclick="gopi()"/></td>
-                <td><input type="button" value="2" onclick="gopi()"/></td>
-                <td><input type="button" value="3" onclick="gopi()"/></td>
-                <td><input type="button" value="/" onclick="gopi()"/></td>
+                <td><input type="button" value="1" onclick="gopi('1')"/></td>
+                <td><input type="button" value="2" onclick="gopi('2')"/></td>
+                <td><input type="button" value="3" onclick="gopi('3')"/></td>
+                <td><input type="button" value="/" onclick="gopi('/')"/></td>
             </tr>
             <tr>
-                <td><input type="button" value="4" onclick="gopi()"/></td>
-                <td><input type="button" value="5" onclick="gopi()"/></td>
-                <td><input type="button" value="6" onclick="gopi()"/></td>
-                <td><input type="button" value="-" onclick="gopi()"/></td>
+                <td><input type="button" value="4" onclick="gopi('4')"/></td>
+                <td><input type="button" value="5" onclick="gopi('5')"/></td>
+                <td><input type="button" value="6" onclick="gopi('6')"/></td>
+                <td><input type="button" value="-" onclick="gopi('-')"/></td>
             </tr>
             <tr>
-                <td><input type="button" value="7" onclick="gopi()"/></td>
-                <td><input type="button" value="8" onclick="gopi()"/></td>
-                <td><input type="button" value="9" onclick="gopi()"/></td>
-                <td><input type="button" value="+" onclick="gopi()"/></td>
+                <td><input type="button" value="7" onclick="gopi('7')"/></td>
+                <td><input type="button" value="8" onclick="gopi('8')"/></td>
+                <td><input type="button" value="9" onclick="gopi('9')"/></td>
+                <td><input type="button" value="+" onclick="gopi('+')"/></td>
             </tr>
             <tr>
-                <td><input type="button" value="." onclick="gopi()"/></td>
-                <td><input type="button" value="0" onclick="gopi()"/></td>
+                <td><input type="button" value="." onclick="gopi('.')"/></td>
+                <td><input type="button" value="0" onclick="gopi('0')"/></td>
                 <!--equal taking function solve in this case-->
                 <td><input type="button" value="=" onclick="solve()"/></td>
                 <td><input type="button" value="c" onclick="clr()"/></td>
@@ -89,8 +89,8 @@
         </div>
         <!--script dom -->
         <script>
-            function gopi(){
-                document.getElementById("result").value
+            function gopi(val){
+                document.getElementById("result").value+=val
             }
             function solve(){
                 let x=document.getElementById("result").value
@@ -100,8 +100,8 @@
             function clr() {
                 document.getElementById("result").value=""
             }
-            function del() {
-              let x= document.getElementById("result")
+            function del(val) {
+              let x= document.getElementById("result").value-=input
                     
             }
         </script>
